@@ -1,4 +1,6 @@
 public class Diagonal {
+    // DIAGONAL
+    //DIAGONAL matrix
     public static void main(String[] args) {
         int input = 30;
 
