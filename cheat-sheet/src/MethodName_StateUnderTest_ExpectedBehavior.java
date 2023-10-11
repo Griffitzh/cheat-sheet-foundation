@@ -12,6 +12,7 @@ public class MethodName_StateUnderTest_ExpectedBehavior {
         anagram = new Anagram();
     }
 
+    //TEST DOESNT WORK WITHOUT AN ASSERT METHOD!
     @Test
     @DisplayName("myMethodName width random numbers should return false")
     public void myMethodName_WithRandomNumbers_ShouldReturnFalse(){
