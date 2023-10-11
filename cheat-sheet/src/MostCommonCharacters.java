@@ -62,6 +62,7 @@ public class MostCommonCharacters {
             //INSERT THE STRING CONVERTED TO CHAR and THE OCCURENCE AMOUNT
             twoMostCommon.put(maxLetter.charAt(0), maxOccurrency);
 
+            //REMOVE FROM MAP COLLECTION SO WE CAN FIND THE NEXT BING THING
             lettersWithOccurrences.remove(maxLetter);
 
         }
