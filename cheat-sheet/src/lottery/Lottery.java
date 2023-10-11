@@ -40,7 +40,7 @@ public class Lottery {
         }
 
         for (Map.Entry<String,Integer> entry : numbersMap.entrySet()) {
-            System.out.println(entry);;
+           // System.out.println(entry);;
         }
 
         String[] bestNumbers = new String[5];

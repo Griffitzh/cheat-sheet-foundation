@@ -37,15 +37,17 @@ public class ReversedLines {
             fileCollector = Files.readAllLines(filepathSource, StandardCharsets.UTF_8);
 
         } catch (IOException e) {
-            System.out.println("File not found");
-            System.exit(1);
+            throw new RuntimeException("File not found");
         }
 
         char reverseChar = 0;
         String myString = "";
 
+        //GO OVER EACH LINE
         for (int i = 0; i < fileCollector.size(); i++) {
+            //GO OVER EACH WORD PER LINE
             for (int j = 0; j < fileCollector.get(i).length(); j++) {
+                //CHECK THE LAST CHARACHTER AND INSERT INTO A NEW STRING
                 reverseChar = fileCollector.get(i).charAt((fileCollector.get(i).length() - 1) - j);
                 myString += Character.toString(reverseChar);
             }
@@ -58,7 +60,7 @@ public class ReversedLines {
         try {
             Files.write(filepathTarget, linesCollector, StandardOpenOption.WRITE);
         } catch (IOException e) {
-            System.out.println("File cannot be written");
+            throw new RuntimeException("File cannot be written");
         }
     }
 }

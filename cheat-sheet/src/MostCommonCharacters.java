@@ -7,7 +7,7 @@ import java.util.*;
 
 public class MostCommonCharacters {
     public static void main(String[] args) {
-        System.out.println(getTwoMostCommonCharacters("src/com/gfa/exam/input.txt"));
+        System.out.println(getTwoMostCommonCharacters("src/countchar.txt"));
     }
 
     public static Map<Character, Integer> getTwoMostCommonCharacters(String fileName){
@@ -21,16 +21,21 @@ public class MostCommonCharacters {
         }
 
         Map<String, Integer> lettersWithOccurrences = new HashMap<>();
+        //FILL HASMAP WITH LETTERS AND THE OCCURENCE AMOUNT AS VALUES
         for(String line : lines){
+            //SPLIT LINES WORDS
             String[] wordsOfLine = line.split(" ");
 
             for (String word : wordsOfLine){
+                //SPLIT WORDS TO CHARS (still a string)
                 String[] lettersOfWord = word.split("");
 
                 for (String letter : lettersOfWord){
+                    //IF ITS NOT YET PART OF KEY, then INSERT KEY & VALUE
                     if(!lettersWithOccurrences.containsKey(letter)){
                         lettersWithOccurrences.put(letter, 1);
                     } else {
+                        //OTHERWISE INCREASE OCCURENCE AMOUNT
                         Integer occurrency = lettersWithOccurrences.get(letter);
                         lettersWithOccurrences.put(letter, ++occurrency);
                     }
@@ -38,9 +43,10 @@ public class MostCommonCharacters {
             }
         }
 
+        //NEW HASMAP FOR THE 2 HIGHEST VALUE KEYS
         Map<Character, Integer> twoMostCommon = new HashMap<>();
 
-        //NOT SURE IF WORKS, DIDN'T CHECK LOGIC YET
+        //IF THE OVERALL LETTER DIVERSITY IS NOT ENOUGH WE DO A SHORTER FOR LOOP
         int numberOfChecks = lettersWithOccurrences.size() != 2 ? 2 : lettersWithOccurrences.size();
 
         for (int i = 0; i < numberOfChecks; i++) {
@@ -53,6 +59,7 @@ public class MostCommonCharacters {
                     maxLetter = entry.getKey();
                 }
             }
+            //INSERT THE STRING CONVERTED TO CHAR and THE OCCURENCE AMOUNT
             twoMostCommon.put(maxLetter.charAt(0), maxOccurrency);
 
             lettersWithOccurrences.remove(maxLetter);
