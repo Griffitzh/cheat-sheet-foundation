@@ -1,4 +1,3 @@
-package dating_app;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +12,7 @@ public abstract class Profile {
     protected int maxDailyLike;
     protected List<Profile> likedProfiles;
 
-    public Profile(int age, String gender, String targetGender, int maxDailyLike){
+    public Profile(int age, String gender, String targetGender, int maxDailyLike) {
         this.age = age;
         this.gender = gender;
         this.targetGender = targetGender;
@@ -23,7 +22,7 @@ public abstract class Profile {
         likedProfiles = new ArrayList<>();
     }
 
-    private int generateId(){
+    private int generateId() {
         String storeId = "";
         String[] possibleNumber = {"1", "2", "3", "4", "5"};
 
@@ -56,12 +55,12 @@ public abstract class Profile {
     public abstract void sendMessage(Profile otherProfile);
 
     @Override
-    public String toString(){
+    public String toString() {
         return age + " year old " + gender + ", looking for a "
                 + targetGender + ". (id: " + id + ")";
     }
 
-    public void resetDailyLikeCounter(){
+    public void resetDailyLikeCounter() {
         dailyLikeCounter = 0;
     }
 }
