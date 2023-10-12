@@ -25,22 +25,23 @@ public class Lottery {
 
         List<String> numbers = new ArrayList<>();
 
-        for (String line: lines) {
+        for (String line : lines) {
             for (int i = 0; i < 5; i++) {
+                //ONLY TAKE IN DATAS FROM the 11th ";" SO WE ONLY TAKE IN LOTTERY NUMBERS
                 numbers.add(line.split(";")[11 + i]);
             }
         }
 
         Map<String, Integer> numbersMap = new HashMap<>();
-        for (String element:numbers) {
+        for (String element : numbers) {
             if (!numbersMap.containsKey(element)) {
                 numbersMap.put(element, 0);
             }
             numbersMap.put(element, numbersMap.get(element) + 1);
         }
 
-        for (Map.Entry<String,Integer> entry : numbersMap.entrySet()) {
-           // System.out.println(entry);;
+        for (Map.Entry<String, Integer> entry : numbersMap.entrySet()) {
+            // System.out.println(entry);;
         }
 
         String[] bestNumbers = new String[5];
