@@ -1,3 +1,5 @@
+package foundationstuff;
+
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -18,7 +20,7 @@ public class ReversedLines {
         // Change the path of the reversed-lines.txt source file to the path
         // where you saved it on your computer.
         // You can find the source file in a link next to this exercise.
-        decryptReversed("reversed-lines.txt");
+        decryptReversed("foundationstuff/reversed-lines.txt");
     }
 
     private static void decryptReversed(String fileName) {

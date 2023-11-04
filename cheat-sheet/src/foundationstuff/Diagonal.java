@@ -1,3 +1,5 @@
+package foundationstuff;
+
 public class Diagonal {
     // DIAGONAL
     //DIAGONAL matrix

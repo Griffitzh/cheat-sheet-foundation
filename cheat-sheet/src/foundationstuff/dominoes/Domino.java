@@ -1,4 +1,4 @@
-package dominoes;
+package foundationstuff.dominoes;
 //CONSTRUCTOR
 
 public class Domino {

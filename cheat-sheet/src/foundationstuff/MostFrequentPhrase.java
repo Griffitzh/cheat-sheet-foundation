@@ -1,3 +1,4 @@
+package foundationstuff;
 
 public class MostFrequentPhrase {
     public static void main(String[] args) {
@@ -30,11 +31,11 @@ public class MostFrequentPhrase {
         for (int i = 0; i < search.length; i++) {
             counter = 0;
             for (int j = 0; j < search.length; j++) {
-                if (search[i].equals(search[j])){
+                if (search[i].equals(search[j])) {
                     counter++;
                 }
             }
-            if (maxCounter < counter){
+            if (maxCounter < counter) {
                 maxCounter = counter;
                 chosenOne = search[i];
             }

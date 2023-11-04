@@ -1,4 +1,4 @@
-package lottery;
+package foundationstuff.lottery;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -7,7 +7,7 @@ import java.util.*;
 
 public class Lottery {
     public static void main(String[] args) {
-        String filename = "src/lottery/lottery.csv";
+        String filename = "src/foundationstuff.lottery/foundationstuff.lottery.csv";
         List<String> lines = new ArrayList<>();
 
         try {

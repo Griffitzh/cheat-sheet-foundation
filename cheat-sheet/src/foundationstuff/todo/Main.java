@@ -1,4 +1,4 @@
-package todo;
+package foundationstuff.todo;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -13,7 +13,7 @@ public class Main {
 
     // Put your file in the assets folder and refer to it as using an absolute path:
     private static Path filePath = Paths.get(
-            "C:\\vscode_projects\\greenfox\\to-do\\to-do\\assets\\todo.txt");
+            "C:\\vscode_projects\\greenfox\\to-do\\to-do\\assets\\foundationstuff.todo.txt");
     private static List<String> lines = null;
 
     public static void main(String[] args) {

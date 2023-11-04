@@ -1,3 +1,5 @@
+package foundationstuff;
+
 import java.util.Scanner;
 
 public class DrawDiamond {

@@ -1,4 +1,4 @@
-package Lambda;
+package foundationstuff.Lambda;
 
 public class Lambda {
     //SHORTCUT for defining an implementation of a functional interface

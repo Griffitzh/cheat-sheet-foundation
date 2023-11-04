@@ -1,3 +1,5 @@
+package foundationstuff;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -34,16 +36,16 @@ public class ShoppingList {
 
         for (Map.Entry<String, Double> termek : bolt.entrySet()) {
             for (Map.Entry<String, Integer> bobtermek : bobsList.entrySet()) {
-                if(termek.getKey().equals(bobtermek.getKey())) {
-                    bobsPay += termek.getValue()*bobtermek.getValue();
+                if (termek.getKey().equals(bobtermek.getKey())) {
+                    bobsPay += termek.getValue() * bobtermek.getValue();
                 }
             }
         }
         System.out.println(bobsPay);
         for (Map.Entry<String, Double> termek : bolt.entrySet()) {
             for (Map.Entry<String, Integer> alicetermek : aliceList.entrySet()) {
-                if(termek.getKey().equals(alicetermek.getKey())) {
-                    alicesPay += termek.getValue()*alicetermek.getValue();
+                if (termek.getKey().equals(alicetermek.getKey())) {
+                    alicesPay += termek.getValue() * alicetermek.getValue();
                 }
             }
         }

@@ -1,3 +1,5 @@
+package foundationstuff;
+
 public class GetChildClass {
 
     //is newParent is instance of children or subclass

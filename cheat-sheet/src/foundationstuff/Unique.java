@@ -1,3 +1,5 @@
+package foundationstuff;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +29,7 @@ public class Unique {
                     if (counter > 1) {
                         newNumbers.remove(newNumbers.get(j));
                         counter--;
-                        if(i > 0){
+                        if (i > 0) {
                             i--;
                         }
                     }
