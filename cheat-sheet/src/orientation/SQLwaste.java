@@ -1,3 +1,5 @@
+package orientation;
+
 public class SQLwaste {
     //Multiple CASE WHEN plus group by order by with a hint of SUM
     /*
